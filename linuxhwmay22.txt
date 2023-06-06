@@ -1,0 +1,12 @@
+   0 ps -ef
+   1 mkdir new
+   2 cd new
+   3 touch file
+   4 date >> file
+   5 df -h | awk '{print}' | grep G >> file
+   6 history | tail -5 >> file
+   7 cat /proc/cpuinfo | grep vendor >> file
+   8 cat /proc/cpuinfo | grep vendor | awk '{print $3}'
+   9 cat /proc/cpuinfo | tail -21 | wc -l >> file
+  10 history
+  11 history > /tmp/history.txt
